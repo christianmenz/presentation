@@ -1,5 +1,5 @@
 
-# Dockerfile for the docker presentation app
+# Dockerfile for the presentation app
 #
 
 # Pull base image.
