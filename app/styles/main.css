@@ -1,0 +1,115 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+* {
+    box-sizing:border-box;
+}
+
+body {
+   font-family:'Oswald', sans-serif;
+   margin:0;
+   font-size: 1.8em;    
+   background: #b3dced;    
+	overflow-x: hidden;
+}
+#toggle {
+   top:10px;
+   right:10px;
+   position:fixed;
+}
+
+.toggle-btn {
+	border: none;
+}
+
+.bar {
+	margin-top: 2px;	
+	width: 22px;
+	height: 2px;
+	display:block;
+	background-color: black;
+}
+.bar:last-child {	
+	margin-bottom: 2px;	
+}
+
+#content {
+   text-align:center;
+   width:100%;    
+   padding:10px;
+   position: relative;        	   
+}
+.menue-wrapper {
+   -webkit-transform-style: preserve-3d;
+   -webkit-perspective: 2000px;	
+   width:250px;
+   position:fixed;
+   top:0px;
+   right:0px;
+   height:100vh;
+}
+#menue {
+   overflow:hidden;
+   background-color:#FFF;
+   -webkit-transform-origin: 100% 0%;
+   border-left:1px solid black;
+   border-top: 1px solid black;
+   border-bottom: 1px solid black;
+   padding:10px;
+   height:100%;
+}
+
+.menue-hidden #menue {
+	-webkit-transform: rotateY(-90deg);
+   opacity:0;   
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.0s 0.5s;
+}
+
+.menue-visible #menue {
+	-webkit-transform: rotateY(0deg);
+	opacity: 1;
+	-webkit-transition: -webkit-transform 0.5s;
+}
+
+.menue-visible #content {
+	width:calc(100% - 250px);
+	-webkit-transition: width 0.5s;
+}
+
+.menue-hidden #content {
+	width:100%;
+	-webkit-transition: width 0.5s;
+}
+
+.view {
+   -webkit-transition: 1s;
+   position: absolute;
+   left:0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.forward .view.ng-enter{
+	left:100%;
+}
+
+.backward .view.ng-enter{
+  left:-100%;
+}
+
+ .view.ng-enter.ng-enter-active{
+  left: 0;
+}
+
+.view.ng-leave {
+	left:0;
+}
+
+.forward .view.ng-leave.ng-leave-active {
+  left:-100%;
+}	
+
+.backward .view.ng-leave.ng-leave-active {
+  left:100%;
+}
+	
