@@ -1,4 +1,17 @@
 <div>
   <h1>Dockerfile</h1>
-	<p>Contains building instructions. Basically a set of commands to be run on top of some base image</p>  
+  	<div class="terminal left">
+  		FROM nodejs<br/>
+  		WORKDIR /data<br/>
+  		RUN git clone https://github.com/christianmenz/presentation.git<br/>
+  		WORKDIR /data/presentation<br/>
+  		RUN npm install<br/>
+  		RUN npm install -g bower<br/>
+  		RUN npm install -g grunt-cli<br/>
+  		RUN bower install --allow-root<br/>
+  		EXPOSE 9000<br/>
+  		# Define default command.<br/>
+  		CMD cd /data/presentation && grunt serve
+  	</div>
+	<p>Build instructions for a Docker image. Basically a set of commands to be run on top of some base image.</p>  
 </div>

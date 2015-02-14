@@ -22,14 +22,22 @@
 		};
 	  	
 	  	function nextSlide() {
-	  		$('#content').attr('class','forward');  	
 	  		var idx = 1 * $routeParams.index + 1;	  			  		
+	  		if (idx >= slideShowService.getSlides().length) {
+	  			return;
+	  		}
+	  		
+	  		$('#content').attr('class','forward');  	
 	  		$location.path('slide/' + idx);	  		
 	  	}
 	  	
 	  	function previousSlide() {
+	  		var idx = 1 * $routeParams.index - 1;	  	  		  		
+	  		if (idx < 0) {
+	  			return;
+	  		}
+
 			$('#content').attr('class','backward');
-	  		var idx = 1 * $routeParams.index - 1;	  						
 			$location.path('slide/' + idx);
 	  	}
 	});
