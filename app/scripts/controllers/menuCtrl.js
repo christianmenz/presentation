@@ -1,12 +1,11 @@
 (function() {
 	'use strict'
 	
-	
 	angular.module('app').controller('MenuCtrl', function ($scope, $location, $document, slideShowService) {      
-      var vm = this;
-            
+      var vm = this;            
 		vm.visible = false;
 		vm.slides = slideShowService.getSlides();
+		
 		vm.toggleMenu = toggleMenu;
 
 		////

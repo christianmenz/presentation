@@ -6,11 +6,14 @@
 FROM nodejs
 
 WORKDIR /data
-ADD /data /??? ## or get it from github??
+RUN git clone https://github.com/christianmenz/presentation.git
+WORKDIR /data/presentation
 RUN npm install
-RUN bower install
+RUN npm install -g bower
+RUN npm install -g grunt-cli
+RUN bower install --allow-root
 
 EXPOSE 9000
 
 # Define default command.
-CMD ["grunt serve"]
+CMD cd /data/presentation && grunt serve

@@ -7,10 +7,38 @@
 body {
    font-family:'Oswald', sans-serif;
    margin:0;
-   font-size: 1.8em;    
-   background: #b3dced;    
+   font-size: 2.0em;    
+   background: #F0F0F0;    
 	overflow-x: hidden;
 }
+
+
+.terminal {
+	background-color: #484848;	
+	color: #00CC00;
+	border-radius: 15px;
+	margin-left: 100px;
+	width: auto;
+	margin-right: 100px;
+	padding:25px;
+}
+
+ul {
+	background-color: #5B99CD;
+	color: #FFFFFF;
+	border-radius: 15px;
+	margin-left: 100px;
+	width: auto;
+	margin-right: 100px;
+	padding:25px;
+	text-align: left;
+	list-style-type: none;
+}
+
+ul li {
+	margin-bottom: 25px
+}
+
 #toggle {
    top:10px;
    right:10px;
@@ -41,7 +69,7 @@ body {
 .menue-wrapper {
    -webkit-transform-style: preserve-3d;
    -webkit-perspective: 2000px;	
-   width:250px;
+   width:350px;
    position:fixed;
    top:0px;
    right:0px;
@@ -56,6 +84,7 @@ body {
    border-bottom: 1px solid black;
    padding:10px;
    height:100%;
+   font-size: 1.0em;
 }
 
 .menue-hidden #menue {
@@ -71,7 +100,7 @@ body {
 }
 
 .menue-visible #content {
-	width:calc(100% - 250px);
+	width:calc(100% - 350px);
 	-webkit-transition: width 0.5s;
 }
 
