@@ -12,7 +12,7 @@
 		
 		function toggleMenu() {
     		vm.visible = !vm.visible;
-    		$('#container').attr('class',vm.visible ? 'menue-visible' : 'menue-hidden');
+    		$('#container').attr('class',vm.visible ? 'menu-visible' : 'menu-hidden');
 		}					 
   });
 })();

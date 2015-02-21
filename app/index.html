@@ -19,13 +19,13 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
   
-    <div id="container" class="menue-hidden">
+    <div id="container" class="menu-hidden">
     <div id="content" class="forward">
           <div ng-view class="view"></div>
     </div>
     <div style="clear:both;"></div>
-    <div ng-controller="MenuCtrl as menuCtrl" class="menue-wrapper">
-        <div id="menue">				        
+    <div ng-controller="MenuCtrl as menuCtrl" class="menu-wrapper">
+        <div id="menu">				        
             <div  ng-repeat="slide in menuCtrl.slides"><a ng-href="#/slide/{{$index}}">{{slide.label}}</a></div>            
         </div>
         <div id="toggle">
