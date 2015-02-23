@@ -3,7 +3,7 @@
 #
 
 # Pull base image.
-FROM nodejs
+FROM dockerfile/nodejs
 
 WORKDIR /data
 RUN git clone https://github.com/christianmenz/presentation.git
