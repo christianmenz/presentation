@@ -1,6 +1,6 @@
 <!doctype html>
 <html class="no-js">
-  <head>
+<head>
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -13,18 +13,18 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body ng-app="app">
+</head>
+<body ng-app="app">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-  
-    <div id="container" class="menu-hidden">
-    <div id="content" class="forward">
+      <![endif]-->
+      
+      <div id="container" class="menu-hidden">
+        <div id="content" class="forward">
           <div ng-view class="view"/>
-    </div>
-    <div style="clear:both;"></div>
-    <div ng-controller="MenuCtrl as menuCtrl" class="menu-wrapper">
+      </div>
+      <div style="clear:both;"></div>
+      <div ng-controller="MenuCtrl as menuCtrl" class="menu-wrapper">
         <div id="menu">				        
             <div  ng-repeat="slide in menuCtrl.slides"><a ng-href="#/slide/{{$index}}">{{slide.label}}</a></div>            
         </div>
@@ -52,17 +52,17 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        
-			<!-- Services -->
-        <script src="scripts/services/slideShowService.js"></script>
-        
-        <!-- Controllers -->
-        <script src="scripts/controllers/mainCtrl.js"></script>
-        <script src="scripts/controllers/menuCtrl.js"></script>
-        
-        
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    
+    <!-- Services -->
+    <script src="scripts/services/slideShowService.js"></script>
+    
+    <!-- Controllers -->
+    <script src="scripts/controllers/mainCtrl.js"></script>
+    <script src="scripts/controllers/menuCtrl.js"></script>
+    
+    
+    <!-- endbuild -->
 </body>
 </html>

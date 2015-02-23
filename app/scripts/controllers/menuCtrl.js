@@ -2,7 +2,7 @@
 	'use strict'
 	
 	angular.module('app').controller('MenuCtrl', function ($scope, $location, $document, slideShowService) {      
-      var vm = this;            
+		var vm = this;            
 		vm.visible = false;
 		vm.slides = slideShowService.getSlides();
 		
@@ -11,8 +11,8 @@
 		////
 		
 		function toggleMenu() {
-    		vm.visible = !vm.visible;
-    		$('#container').attr('class',vm.visible ? 'menu-visible' : 'menu-hidden');
+			vm.visible = !vm.visible;
+			$('#container').attr('class',vm.visible ? 'menu-visible' : 'menu-hidden');
 		}					 
-  });
+	});
 })();
