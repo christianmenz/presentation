@@ -13,7 +13,5 @@ RUN npm install -g bower
 RUN npm install -g grunt-cli
 RUN bower install --allow-root
 
-EXPOSE 9000
-
 # Define default command.
 CMD cd /data/presentation && grunt serve
